@@ -375,7 +375,7 @@ public class UsersPage {
 	}
 
 	public void addingAdminBt() {
-		driver.findElement(By.xpath("//span[text()='Add Admin']")).click();
+		driver.findElement(By.xpath("//span[text()='Add User']")).click();
 
 	}
 

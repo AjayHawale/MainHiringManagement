@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import BaseB.BaseT;
 
 @Ignore
-public class JobsPageTest3 extends BaseT {
+public class JobsPageTest extends BaseT {
 	String ProfName = BaseT.ReadConfig("profName");
 	String ProfLoc = BaseT.ReadConfig("profLoc");
 	String ProfEmail = BaseT.ReadConfig("profEmail");

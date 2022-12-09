@@ -126,23 +126,61 @@ public class UsersPageTest2 extends BaseT {
 	 * }
 	 */
 
-	@Test(priority = 13, groups="JobDescriptionPage")
+	@Test(priority = 13)
 	public void ViewProfileJD() throws InterruptedException {
 		jp.ViewProfileShort();
+		driver.navigate().back();
 	}
-@Ignore
+	
+	
+	@Ignore
 	@Test(priority = 14)
-	public void ViewrejectProfile() throws InterruptedException {
+	public void ViewrejectProfile() throws InterruptedException, AWTException {
+		Thread.sleep(3000);
+		jp.clickOnJobIcon();
+		Thread.sleep(3000);
+		jp.addingAutomationTesterProfile();
+		Thread.sleep(3000);
+		jp.AddPersonName();
+		Thread.sleep(3000);
+		jp.AddingPersonEmail();
+		Thread.sleep(3000);
+		jp.AddPersonPhone();
+
+		Thread.sleep(3000);
+		jp.AddingPersonalOtherDetails();
+		Thread.sleep(3000);
+		jp.selectPrefferdLocationAddProf();
+		Thread.sleep(3000);
+		jp.uploadFile();
+
 		jp.Profilereject();
 	}
 
 @Ignore
 @Test(priority=15)
-public void ViewDuplicateProf() throws InterruptedException {
+public void ViewDuplicateProf() throws InterruptedException, AWTException {
+	Thread.sleep(3000);
+	jp.clickOnJobIcon();
+	Thread.sleep(3000);
+	jp.addingAutomationTesterProfile();
+	Thread.sleep(3000);
+	jp.AddPersonName();
+	Thread.sleep(3000);
+	jp.AddingPersonEmail();
+	Thread.sleep(3000);
+	jp.AddPersonPhone();
+
+	Thread.sleep(3000);
+	jp.AddingPersonalOtherDetails();
+	Thread.sleep(3000);
+	jp.selectPrefferdLocationAddProf();
+	Thread.sleep(3000);
+	jp.uploadFile();
 	jp.ViewProfileDuplicate();
 }
 	
-	@Ignore
+	
 	@Test(priority = 16)
 	public void panelistAdd() throws InterruptedException {
 		pp.AddPanelist(BaseT.ReadConfig("PanelistName"), BaseT.ReadConfig("PanelistEmail"),

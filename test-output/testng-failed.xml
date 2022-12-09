@@ -5,20 +5,18 @@
     <classes>
       <class name="Test.UsersPageTest2">
         <methods>
-          <include name="ViewDuplicateProf"/>
+          <include name="SearchAgency"/>
+          <include name="panelistAdd"/>
+          <include name="AdAgency"/>
+          <include name="SearchingJd"/>
+          <include name="ViewProfileJD"/>
+          <include name="DeleteUsers"/>
           <include name="initilization"/>
+          <include name="addJD"/>
           <include name="objectInitiate"/>
+          <include name="deleteAgency"/>
         </methods>
       </class> <!-- Test.UsersPageTest2 -->
-      <class name="Test.PanelistsPageTest">
-        <methods>
-          <include name="searchingPanelists"/>
-          <include name="panelistAdd"/>
-          <include name="editingPanelists"/>
-          <include name="initilization"/>
-          <include name="objectInitiate"/>
-        </methods>
-      </class> <!-- Test.PanelistsPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

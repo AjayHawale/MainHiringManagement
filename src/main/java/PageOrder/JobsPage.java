@@ -613,22 +613,29 @@ public class JobsPage {
 	public void Profilereject() throws InterruptedException {
 		Thread.sleep(3000);
 		ViewProfileForJDEyeBtn.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		AnkitProfile.click();
-		Thread.sleep(3000);
-		System.out.println("Clicked on the profiele...");
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.xpath("//*[text()='Reject']"));
-		js.executeScript("arguments[0].scrollIntoView();", Element);
-		System.out.println("Scrolldown ws done...");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Reject']")));
-Thread.sleep(3000);
+		//Thread.sleep(3000);
+		//System.out.println("Clicked on the profiele...");
+		ShortlisterComment.sendKeys("You get Rejected ..!!!");
+		Thread.sleep(5000);
+		if (RejectProfileBtn.isDisplayed()) {
+			RejectProfileBtn.click();
+		} else {
+			System.out.println("Profile Reject button issue.");
+		}
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		WebElement Element = driver.findElement(By.xpath("//*[text()='Reject']"));
+//		js.executeScript("arguments[0].scrollIntoView();", Element);
+//		System.out.println("Scrolldown ws done...");
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));
+//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Reject']")));
+//Thread.sleep(3000);
 //		driver.findElement(By.xpath("(//*[@class='ant-btn ant-btn-text'])[1]")).click();
 
 		// ShortlisterComment.sendKeys("You get Rejected ..!!!");
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//*[text()='Reject']")).click();  //input[@type='checkbox']
+	//	Thread.sleep(5000);
+		//driver.findElement(By.xpath("//*[text()='Reject']")).click();  //input[@type='checkbox']   //button[@id='rejectCandidate']
 		
 	}
 	public void ViewProfileDuplicate() throws InterruptedException {
@@ -643,7 +650,7 @@ Thread.sleep(3000);
 		} else {
 			System.out.println("Profile deplicate button issue.");
 		}
-		
-		driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary']")).click();
+		//button[@class='ant-btn ant-btn-primary']
+		driver.findElement(By.xpath("/html/body/div[10]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")).click();
 	}
 }

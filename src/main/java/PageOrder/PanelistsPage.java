@@ -3,11 +3,16 @@ package PageOrder;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PanelistsPage {
 	WebDriver driver;
@@ -126,18 +131,32 @@ public class PanelistsPage {
 
 	public void AddPanelist(String PanelistName, String PanelistEmail, String PanelistPhone, String PanelistDesignation)
 			throws InterruptedException {
-		//wait(3000);
+		// wait(3000);
 		PanelistModule.click();
-		wait(3000);
+
 		AddpanelistButton.click();
-		wait(3000);
+		//wait(3000);
 		panelistName.sendKeys(PanelistName);
 		panelistEmail.sendKeys(PanelistEmail);
 		panelistPhone.sendKeys(PanelistPhone);
-		wait(3000);
-		DesignationDropdown.sendKeys(PanelistDesignation);
-		wait(3000);
-		savePanelistButton.click();
+		//wait(3000);
+		//DesignationDropdown.sendKeys(PanelistDesignation);
+		//wait(3000);
+		
+	}
+	public void panelistDesignation() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7000));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")));
+
+		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")).click();
+		System.out.println("The clicked on Add panelist Designation....");
+		int size = driver.findElements(By.xpath("//*[@class='ant-select-item-option-content']")).size();
+		System.out.println("The size is :" + size);
+		
+				driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[3]")).click();
+				
+				savePanelistButton.click();
+		
 	}
 
 	public void EditPanelist(String EditPanelistPhone) throws InterruptedException {

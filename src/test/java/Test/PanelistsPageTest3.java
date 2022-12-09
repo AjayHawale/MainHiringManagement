@@ -2,15 +2,16 @@ package Test;
 
 import static org.testng.Assert.assertEquals;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import BaseB.BaseT;
 import PageOrder.PanelistsPage;
-
-public class PanelistsPageTest extends BaseT {
+@Ignore
+public class PanelistsPageTest3 extends BaseT {
 
 	
-	@Test(priority=16, dependsOnMethods = { "ViewProfileJD" },dependsOnGroups = { "JobDescriptionPage" })
+	@Test(priority=16, dependsOnGroups = { "JobDescriptionPage" })
 	public void panelistAdd() throws InterruptedException {
 		pp.AddPanelist(BaseT.ReadConfig("PanelistName"), BaseT.ReadConfig("PanelistEmail"), BaseT.ReadConfig("PanelistPhone"), BaseT.ReadConfig("PanelistDesignation"));
 	}
