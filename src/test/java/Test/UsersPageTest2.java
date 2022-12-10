@@ -184,22 +184,27 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	@Test(priority = 16)
 	public void panelistAdd() throws InterruptedException {
 		pp.AddPanelist(BaseT.ReadConfig("PanelistName"), BaseT.ReadConfig("PanelistEmail"),
-				BaseT.ReadConfig("PanelistPhone"), BaseT.ReadConfig("PanelistDesignation"));
+				BaseT.ReadConfig("PanelistPhone"));
+		pp.panelistDesignation();
 	}
-
-	@Ignore
-	@Test(priority = 17)
-	public void editingPanelists() throws InterruptedException {
-		pp.EditPanelist(BaseT.ReadConfig("EditPanelistPhone"));
+	
+	@Test(priority=17)
+	public void addingSlots() throws InterruptedException {
+		pp.addSlotsNewPanelist();
 	}
-
-	@Ignore
 	@Test(priority = 18)
 
 	public void searchingPanelists() throws InterruptedException {
 		pp.SearchPanel(BaseT.ReadConfig("PanelistSearch"));
 
 	}
+	
+	@Test(priority = 19)
+	public void editingPanelists() throws InterruptedException {
+		pp.EditPanelist(BaseT.ReadConfig("EditPanelistPhone"));
+	}
+
+	
 
 	/*
 	 * @AfterMethod public void closeBrowser() { driver.quit(); }

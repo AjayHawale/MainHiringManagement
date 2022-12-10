@@ -5,16 +5,9 @@
     <classes>
       <class name="Test.UsersPageTest2">
         <methods>
-          <include name="SearchAgency"/>
-          <include name="panelistAdd"/>
-          <include name="AdAgency"/>
-          <include name="SearchingJd"/>
-          <include name="ViewProfileJD"/>
-          <include name="DeleteUsers"/>
           <include name="initilization"/>
-          <include name="addJD"/>
           <include name="objectInitiate"/>
-          <include name="deleteAgency"/>
+          <include name="editingPanelists"/>
         </methods>
       </class> <!-- Test.UsersPageTest2 -->
     </classes>

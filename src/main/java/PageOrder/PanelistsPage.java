@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -53,7 +54,7 @@ public class PanelistsPage {
 
 	/* to edit a panelist */
 
-	@FindBy(xpath = "(//button[@id='edit4'])[1]")
+	@FindBy(xpath = "(//button[@id='edit3'])[1]")
 	WebElement EditPanelistPencil;
 
 	@FindBy(xpath = "(//input[@placeholder='Search Panelist'])[1]")
@@ -106,6 +107,25 @@ public class PanelistsPage {
 	@FindBy(xpath = "(//button[@id='saveSlots'])[1]")
 	WebElement SaveBtn;
 
+	@FindBy(xpath = "(//button[@id='addSlot'])[1]")
+	WebElement AddSlotNew;
+	@FindBy(xpath = "(//input[@placeholder='Start time'])[1]")
+	WebElement StartTime;
+	@FindBy(xpath = "(//div[@class='ant-picker-time-panel-cell-inner'])[3]")
+	WebElement HrsField;
+	@FindBy(xpath = "(//ul[@class='ant-picker-time-panel-column'])[2]/li[1]")
+	WebElement MinuteField;
+	@FindBy(xpath = "(//ul[@class='ant-picker-time-panel-column'])[3]/li[2]")
+	WebElement PmField;
+	@FindBy(xpath = "//input[@placeholder='End time']")
+	WebElement EndTimeFld;
+	@FindBy(xpath = "(//div[@class='ant-picker-time-panel-cell-inner'])[4]")
+	WebElement EndHrsField;
+	@FindBy(xpath = "(//button[@type='button'])/span[text()='Ok']")
+	WebElement OkBt;
+	@FindBy(xpath = "//button[@id='saveSlots']")
+	WebElement SaveSlotBtn;
+
 	/* to view panelist details */
 	@FindBy(xpath = "(//td[@class='ant-table-cell'])[13]")
 	WebElement viewPanelist;
@@ -129,42 +149,78 @@ public class PanelistsPage {
 		PageFactory.initElements(driver, this); // initiaLIZATION
 	}
 
-	public void AddPanelist(String PanelistName, String PanelistEmail, String PanelistPhone, String PanelistDesignation)
+	public void AddPanelist(String PanelistName, String PanelistEmail, String PanelistPhone)
 			throws InterruptedException {
 		// wait(3000);
 		PanelistModule.click();
 
 		AddpanelistButton.click();
-		//wait(3000);
+		// wait(3000);
 		panelistName.sendKeys(PanelistName);
+		Thread.sleep(2000);
 		panelistEmail.sendKeys(PanelistEmail);
+		Thread.sleep(2000);
 		panelistPhone.sendKeys(PanelistPhone);
-		//wait(3000);
-		//DesignationDropdown.sendKeys(PanelistDesignation);
-		//wait(3000);
-		
+		// wait(3000);
+		// DesignationDropdown.sendKeys(PanelistDesignation);
+		// wait(3000);
+
 	}
+
 	public void panelistDesignation() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7000));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")));
+		wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")));
 
 		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")).click();
 		System.out.println("The clicked on Add panelist Designation....");
 		int size = driver.findElements(By.xpath("//*[@class='ant-select-item-option-content']")).size();
 		System.out.println("The size is :" + size);
+
+		driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[3]")).click();
 		
-				driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[3]")).click();
-				
-				savePanelistButton.click();
-		
+		savePanelistButton.click();
+
+	}
+
+	public void addSlotsNewPanelist() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7000));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@id='addSlot'])[1]")));
+
+		driver.findElement(By.xpath("(//button[@id='addSlot'])[1]")).click();
+		StartTime.click();
+		Thread.sleep(2000);
+		HrsField.click();
+		Thread.sleep(2000);
+		MinuteField.click();
+		Thread.sleep(2000);
+		PmField.click();
+		OkBt.click();
+		Thread.sleep(2000);
+		EndTimeFld.click();
+		Thread.sleep(2000);
+		EndHrsField.click();
+		Thread.sleep(2000);
+		MinuteField.click();
+		Thread.sleep(2000);
+		PmField.click();
+		OkBt.click();
+		Thread.sleep(2000);
+		SaveSlotBtn.click();
+
 	}
 
 	public void EditPanelist(String EditPanelistPhone) throws InterruptedException {
-		wait(3000);
-		EditPanelistPencil.click();
-		wait(2000);
+		//wait(3000);
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7000));
+	//	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='anticon anticon-edit'])[1]")));
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("(//span[@class='anticon anticon-edit'])[1]")).click();
+		//EditPanelistPencil.click();
+		//wait(2000);
 		panelistPhone.clear();
-		wait(1000);
+		//wait(1000);
+		Thread.sleep(2000);
 		panelistPhone.sendKeys(EditPanelistPhone);
 		String strphone = panelistPhone.getText();
 		System.out.println("Edited Mobile numer is -" + strphone);
@@ -175,7 +231,7 @@ public class PanelistsPage {
 		Thread.sleep(5000);
 		SearchPanelistField.sendKeys(PanelistSearch);
 		QSearchBtn.click();
-		wait(3000);
+		//wait(3000);
 		String act = ZainNamePanelist.getText();
 		System.out.println("The Name of panelist is--" + act);
 		String expect = "Zain";

@@ -13,7 +13,7 @@ public class PanelistsPageTest3 extends BaseT {
 	
 	@Test(priority=16, dependsOnGroups = { "JobDescriptionPage" })
 	public void panelistAdd() throws InterruptedException {
-		pp.AddPanelist(BaseT.ReadConfig("PanelistName"), BaseT.ReadConfig("PanelistEmail"), BaseT.ReadConfig("PanelistPhone"), BaseT.ReadConfig("PanelistDesignation"));
+		pp.AddPanelist(BaseT.ReadConfig("PanelistName"), BaseT.ReadConfig("PanelistEmail"), BaseT.ReadConfig("PanelistPhone"));
 	}
 	
 	@Test(priority=17)
