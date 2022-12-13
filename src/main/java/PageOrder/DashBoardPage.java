@@ -159,7 +159,7 @@ public class DashBoardPage {
 	
 	public void PanelistOverview() {
 		boolean p=	panelistOverviewAll.isDisplayed();
-		System.out.println("panelist Overview All  Data is displayed......"+ p);
+		System.out.println("panelist Overview All  Data is displayed."+ p);
 		
 	}
 	public void JobProfileData() throws InterruptedException {
