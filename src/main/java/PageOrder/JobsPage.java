@@ -651,6 +651,8 @@ public class JobsPage {
 			System.out.println("Profile deplicate button issue.");
 		}
 		//button[@class='ant-btn ant-btn-primary']
-		driver.findElement(By.xpath("/html/body/div[10]/div/div[2]/div/div[2]/div/div/div[2]/button[2]")).click();
+		driver.findElement(By.xpath("//input[@type='checkbox']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//div[@class='ant-modal-confirm-btns']/button/span)[2]")).click();
 	}
 }

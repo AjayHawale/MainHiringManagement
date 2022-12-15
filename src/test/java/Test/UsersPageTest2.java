@@ -133,7 +133,7 @@ public class UsersPageTest2 extends BaseT {
 	}
 	
 	
-	@Ignore
+	
 	@Test(priority = 14)
 	public void ViewrejectProfile() throws InterruptedException, AWTException {
 		Thread.sleep(3000);
@@ -157,7 +157,7 @@ public class UsersPageTest2 extends BaseT {
 		jp.Profilereject();
 	}
 
-@Ignore
+
 @Test(priority=15)
 public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	Thread.sleep(3000);
