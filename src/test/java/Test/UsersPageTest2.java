@@ -204,6 +204,45 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 		pp.EditPanelist(BaseT.ReadConfig("EditPanelistPhone"));
 	}
 
+	// dashboard page 
+	
+	@Test(priority=20)	
+	public void panelistOverviewDisplay() throws Exception {
+	dp.PanelistPage();
+	dp.SelectPanelist();
+	dp.SelectCalenderPanelist();
+	dp.PanelistOverview();
+	//dp.getScreenShotAS("screenshotOne");
+	}
+
+	@Test(priority=21)
+	public void jobProfilesDisplay() throws InterruptedException {
+	dp.JobProfileData();	
+	dp.SelectJobProfile();
+	dp.SelectCalenderPanelist();
+	}
+	
+	@Test(priority=22)
+	public void recruitersDisplay() throws InterruptedException {
+		dp.recruitersData();
+		dp.SelectRecruiters();
+		dp.SelectCalenderPanelist();
+	}
+	
+	@Test(priority=23)
+	public void hrRoundDataDisplay() throws InterruptedException {
+		dp.HRroundData();
+		dp.SelectJobProfileHR();
+		dp.SelectCalenderPanelist();
+		
+		
+		
+		
+	}
+	
+	
+	
+	
 	
 
 	/*

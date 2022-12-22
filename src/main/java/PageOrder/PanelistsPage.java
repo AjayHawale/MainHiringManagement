@@ -178,7 +178,7 @@ public class PanelistsPage {
 		System.out.println("The size is :" + size);
 
 		driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[3]")).click();
-		
+		Thread.sleep(2000);
 		savePanelistButton.click();
 
 	}
@@ -214,16 +214,18 @@ public class PanelistsPage {
 		//wait(3000);
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7000));
 	//	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='anticon anticon-edit'])[1]")));
-		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleep(2000);
         driver.findElement(By.xpath("(//span[@class='anticon anticon-edit'])[1]")).click();
 		//EditPanelistPencil.click();
 		//wait(2000);
 		panelistPhone.clear();
 		//wait(1000);
 		Thread.sleep(2000);
-		panelistPhone.sendKeys(EditPanelistPhone);
+		panelistPhone.clear();
+		//panelistPhone.sendKeys(EditPanelistPhone);
 		String strphone = panelistPhone.getText();
 		System.out.println("Edited Mobile numer is -" + strphone);
+		driver.findElement(By.xpath("(//span[text()='Save'])[1]")).click();
 	}
 
 	public void SearchPanel(String PanelistSearch) throws InterruptedException {

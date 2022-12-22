@@ -2,9 +2,14 @@ package PageOrder;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,7 +52,7 @@ public class DashBoardPage {
 	WebElement cancelledOption;
 
 	/* Jobs profile */
-	@FindBy(xpath = "//div[@id='root']//div[@class='ant-tabs-nav-wrap']//div[@id='rc-tabs-5-tab-2']")
+	@FindBy(xpath = "(//div[@class='ant-tabs-tab'])[1]")
 	WebElement JobsProfilePage;
 	@FindBy(xpath = "(//*[@class='ant-select-selection-search-input'])[3]")
 	WebElement selectJobprofiles;
@@ -115,7 +120,8 @@ public class DashBoardPage {
 
 	public void PanelistPage() throws InterruptedException {
 		Thread.sleep(2000);
-		selectPanelistdd.click();
+		//going to dashboard module
+		driver.findElement(By.xpath("//*[@id='root']/section/section/section/aside/div/ul/li[1]")).click();
 
 	}
 
@@ -151,8 +157,11 @@ public class DashBoardPage {
 		driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[2]")).click();
 	}
 	public void SelectCalenderPanelist() throws InterruptedException {
-		
+		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@placeholder='End date']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
 	}
@@ -165,22 +174,90 @@ public class DashBoardPage {
 	public void JobProfileData() throws InterruptedException {
 		JobsProfilePage.click();
 		Thread.sleep(2000);
+		System.out.println("It is getting into Job Profile");
 		
 	}
-	public void SelectJobProfile() {
+	
+	public void SelectJobProfile() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[@class='ant-select-selection-search-input'])[3]")));
 		driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[3]")).click();
-		System.out.println("The select JobProfile list is....");
-		int size = driver.findElements(By.xpath("//div[@class='ant-select-item-option-content']")).size();
-		System.out.println("The size is :" + size);
 		
-		driver.findElement(By.xpath("(//*[@class='ant-select-item-option-content'])[19]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//*[@class='ant-select-item-option-content'])[17]")).click();
 	}
+	
 	public void SelectCalenderJobProfile() throws InterruptedException {
 		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
+		Thread.sleep(2000);
+		System.out.println(" Job profile data is showning");
+		
+	}
+	
+	public void recruitersData() throws InterruptedException {
+		driver.findElement(By.xpath("(//div[@class='ant-tabs-tab'])[2]")).click();
+		Thread.sleep(2000);
+		System.out.println("It is getting into Recruiters page");
+		
+	}
+	
+	public void SelectRecruiters() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[4]")));
+		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[4]")).click();
+		
+		Thread.sleep(2000);
+	
+		driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[23]")).click();
+	}
+	
+	public void HRroundData() throws InterruptedException {
+		driver.findElement(By.xpath("(//div[@class='ant-tabs-tab'])[3]")).click();
+		Thread.sleep(2000);
+		System.out.println("It is getting into Recruiters page");
+		
+	}
+	
+	public void SelectJobProfileHR() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='ant-tabs-tab-btn'])[4]")));
+		driver.findElement(By.xpath("(//div[@class='ant-tabs-tab-btn'])[4]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//div[text()='Automation Tester'])[2]")).click();
+	}
+	
+	
+	
+//	public static void takeScreenShotData(WebDriver webdriver) throws Exception{
+//		
+//		TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+//		
+//		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+//	
+//		File DestFile=new File("C:\\Users\\Brigosha_Guest\\Desktop\\New folder");
+//		
+//		FileUtils.copyFile(SrcFile, DestFile);
+//		}
+//	
+	
+	public void getScreenShotAS(String name) {
+		TakesScreenshot ts1 = (TakesScreenshot)driver;
+	    File file1 = ts1.getScreenshotAs(OutputType.FILE);
+				
+	    try {
+	         // FileUtils.copyFile(file1, new File("./Screenshots/Test2_SearchUser.png"));
+	    	 FileUtils.copyFile(file1, new File("./screenshot/"+name+".png"));
+		} catch (IOException e) {
+		e.printStackTrace();
+	}
+	}
+
+	public void takeSnapShot(WebDriver driver2) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

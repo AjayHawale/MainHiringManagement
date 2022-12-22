@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">20 methods, 1 failed,   19 passed</span>
+                    <span class="method-stats">24 methods, 2 failed,   22 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="editingPanelists">editingPanelists</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="hrRoundDataDisplay">hrRoundDataDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="jobProfilesDisplay">jobProfilesDisplay</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -198,12 +203,27 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="editingPanelists">editingPanelists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Test.LoginPageTest1" class="method navigator-link" hash-for-method="forgetPasswordLink">forgetPasswordLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="panelistAdd">panelistAdd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="panelistOverviewDisplay">panelistOverviewDisplay</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.UsersPageTest2" class="method navigator-link" hash-for-method="recruitersDisplay">recruitersDisplay</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -231,19 +251,50 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editingPanelists">
-                  </a> <!-- editingPanelists -->
-                  <span class="method-name">editingPanelists</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=108.0.5359.124)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+                  <a name="hrRoundDataDisplay">
+                  </a> <!-- hrRoundDataDisplay -->
+                  <span class="method-name">hrRoundDataDisplay</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[text()=&apos;Automation Tester&apos;])[2]&quot;}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;DESKTOP-91HRFE0&apos;, ip: &apos;20.0.6.40&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [981bef72a8d27cce1254ea26b7ba0652, clickElement {id=db2a9144-f932-47f3-b139-433a0aebc268}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.124, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50842}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50842/devtoo..., se:cdpVersion: 108.0.5359.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (981bef72a8d27cce1254ea26b7ba0652)] -&gt; xpath: (//span[@class=&apos;anticon anticon-edit&apos;])[1]]
-Session ID: 981bef72a8d27cce1254ea26b7ba0652
+Command: [c2e369ac23038666206d0d46e79f4ff3, findElement {using=xpath, value=(//div[text()=&apos;Automation Tester&apos;])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58431}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58431/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c2e369ac23038666206d0d46e79f4ff3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at PageOrder.DashBoardPage.SelectJobProfileHR(DashBoardPage.java:231)
+	at Test.UsersPageTest2.hrRoundDataDisplay(UsersPageTest2.java:234)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="jobProfilesDisplay">
+                  </a> <!-- jobProfilesDisplay -->
+                  <span class="method-name">jobProfilesDisplay</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-91HRFE0&apos;, ip: &apos;20.0.6.40&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2e369ac23038666206d0d46e79f4ff3, clickElement {id=f6eccb55-0f53-496f-8e17-e0db5afcac71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58431}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58431/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (c2e369ac23038666206d0d46e79f4ff3)] -&gt; xpath: (//*[@class=&apos;ant-select-item-option-content&apos;])[19]]
+Session ID: c2e369ac23038666206d0d46e79f4ff3
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -253,8 +304,8 @@ Session ID: 981bef72a8d27cce1254ea26b7ba0652
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at PageOrder.PanelistsPage.EditPanelist(PanelistsPage.java:218)
-	at Test.UsersPageTest2.editingPanelists(UsersPageTest2.java:204)
+	at PageOrder.DashBoardPage.SelectJobProfile(DashBoardPage.java:189)
+	at Test.UsersPageTest2.jobProfilesDisplay(UsersPageTest2.java:221)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
@@ -397,9 +448,30 @@ Session ID: 981bef72a8d27cce1254ea26b7ba0652
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="editingPanelists">
+                  </a> <!-- editingPanelists -->
+                  <span class="method-name">editingPanelists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="panelistAdd">
                   </a> <!-- panelistAdd -->
                   <span class="method-name">panelistAdd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="panelistOverviewDisplay">
+                  </a> <!-- panelistOverviewDisplay -->
+                  <span class="method-name">panelistOverviewDisplay</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="recruitersDisplay">
+                  </a> <!-- recruitersDisplay -->
+                  <span class="method-name">recruitersDisplay</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -474,92 +546,108 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(20);
+data.addRows(24);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ViewDuplicateProf')
 data.setCell(0, 2, 'Test.UsersPageTest2')
-data.setCell(0, 3, 55753);
+data.setCell(0, 3, 51001);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ViewrejectProfile')
 data.setCell(1, 2, 'Test.UsersPageTest2')
-data.setCell(1, 3, 52964);
+data.setCell(1, 3, 47399);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'addJD')
 data.setCell(2, 2, 'Test.UsersPageTest2')
-data.setCell(2, 3, 39556);
+data.setCell(2, 3, 36208);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'AddUserTest1')
 data.setCell(3, 2, 'Test.UsersPageTest2')
-data.setCell(3, 3, 30268);
+data.setCell(3, 3, 27820);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'addingSlots')
+data.setCell(4, 1, 'jobProfilesDisplay')
 data.setCell(4, 2, 'Test.UsersPageTest2')
-data.setCell(4, 3, 22225);
+data.setCell(4, 3, 24489);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'AdAgency')
+data.setCell(5, 1, 'hrRoundDataDisplay')
 data.setCell(5, 2, 'Test.UsersPageTest2')
-data.setCell(5, 3, 13902);
+data.setCell(5, 3, 24322);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'ViewProfileJD')
+data.setCell(6, 1, 'addingSlots')
 data.setCell(6, 2, 'Test.UsersPageTest2')
-data.setCell(6, 3, 11766);
+data.setCell(6, 3, 19317);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'DeleteUsers')
+data.setCell(7, 1, 'AdAgency')
 data.setCell(7, 2, 'Test.UsersPageTest2')
-data.setCell(7, 3, 10807);
+data.setCell(7, 3, 12558);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'UserPageTest')
-data.setCell(8, 2, 'Test.LoginPageTest1')
-data.setCell(8, 3, 10709);
+data.setCell(8, 1, 'panelistOverviewDisplay')
+data.setCell(8, 2, 'Test.UsersPageTest2')
+data.setCell(8, 3, 11951);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'panelistAdd')
+data.setCell(9, 1, 'ViewProfileJD')
 data.setCell(9, 2, 'Test.UsersPageTest2')
-data.setCell(9, 3, 8626);
+data.setCell(9, 3, 10945);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'searchingPanelists')
-data.setCell(10, 2, 'Test.UsersPageTest2')
-data.setCell(10, 3, 6206);
+data.setCell(10, 1, 'UserPageTest')
+data.setCell(10, 2, 'Test.LoginPageTest1')
+data.setCell(10, 3, 10540);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'SearchingJd')
+data.setCell(11, 1, 'DeleteUsers')
 data.setCell(11, 2, 'Test.UsersPageTest2')
-data.setCell(11, 3, 3969);
+data.setCell(11, 3, 10193);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'deleteAgency')
+data.setCell(12, 1, 'panelistAdd')
 data.setCell(12, 2, 'Test.UsersPageTest2')
-data.setCell(12, 3, 3622);
+data.setCell(12, 3, 9461);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'SearchAgency')
+data.setCell(13, 1, 'searchingPanelists')
 data.setCell(13, 2, 'Test.UsersPageTest2')
-data.setCell(13, 3, 2513);
+data.setCell(13, 3, 5671);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'LoginPageLogo')
-data.setCell(14, 2, 'Test.LoginPageTest1')
-data.setCell(14, 3, 2240);
+data.setCell(14, 1, 'recruitersDisplay')
+data.setCell(14, 2, 'Test.UsersPageTest2')
+data.setCell(14, 3, 4414);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'LogoTest')
-data.setCell(15, 2, 'Test.LoginPageTest1')
-data.setCell(15, 3, 1287);
+data.setCell(15, 1, 'editingPanelists')
+data.setCell(15, 2, 'Test.UsersPageTest2')
+data.setCell(15, 3, 4377);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'editingPanelists')
+data.setCell(16, 1, 'SearchingJd')
 data.setCell(16, 2, 'Test.UsersPageTest2')
-data.setCell(16, 3, 1073);
+data.setCell(16, 3, 3544);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'forgetPasswordLink')
-data.setCell(17, 2, 'Test.LoginPageTest1')
-data.setCell(17, 3, 689);
+data.setCell(17, 1, 'deleteAgency')
+data.setCell(17, 2, 'Test.UsersPageTest2')
+data.setCell(17, 3, 3190);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'LoginButtonDisplay')
-data.setCell(18, 2, 'Test.LoginPageTest1')
-data.setCell(18, 3, 574);
+data.setCell(18, 1, 'SearchAgency')
+data.setCell(18, 2, 'Test.UsersPageTest2')
+data.setCell(18, 3, 2240);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'HiringTitleTest')
+data.setCell(19, 1, 'LoginPageLogo')
 data.setCell(19, 2, 'Test.LoginPageTest1')
-data.setCell(19, 3, 16);
+data.setCell(19, 3, 2072);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'LogoTest')
+data.setCell(20, 2, 'Test.LoginPageTest1')
+data.setCell(20, 3, 1059);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'forgetPasswordLink')
+data.setCell(21, 2, 'Test.LoginPageTest1')
+data.setCell(21, 3, 568);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'LoginButtonDisplay')
+data.setCell(22, 2, 'Test.LoginPageTest1')
+data.setCell(22, 3, 548);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'HiringTitleTest')
+data.setCell(23, 2, 'Test.LoginPageTest1')
+data.setCell(23, 3, 14);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -629,96 +717,114 @@ return data;
               <div class="chronological-class-name">Test.LoginPageTest1</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">objectInitiate</span>
-                <span class="method-start">7195 ms</span>
+                <span class="method-start">4037 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">LoginPageLogo</span>
-                <span class="method-start">7413 ms</span>
+                <span class="method-start">4189 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">forgetPasswordLink</span>
-                <span class="method-start">9665 ms</span>
+                <span class="method-start">6268 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">LoginButtonDisplay</span>
-                <span class="method-start">10357 ms</span>
+                <span class="method-start">6841 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">HiringTitleTest</span>
-                <span class="method-start">10937 ms</span>
+                <span class="method-start">7391 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UserPageTest</span>
-                <span class="method-start">10958 ms</span>
+                <span class="method-start">7408 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">LogoTest</span>
-                <span class="method-start">21676 ms</span>
+                <span class="method-start">17950 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.UsersPageTest2</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">objectInitiate</span>
-                <span class="method-start">22979 ms</span>
+                <span class="method-start">19019 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">AddUserTest1</span>
-                <span class="method-start">23006 ms</span>
+                <span class="method-start">19033 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DeleteUsers</span>
-                <span class="method-start">53283 ms</span>
+                <span class="method-start">46857 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">AdAgency</span>
-                <span class="method-start">64109 ms</span>
+                <span class="method-start">57054 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SearchAgency</span>
-                <span class="method-start">78019 ms</span>
+                <span class="method-start">69615 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteAgency</span>
-                <span class="method-start">80551 ms</span>
+                <span class="method-start">71859 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SearchingJd</span>
-                <span class="method-start">84188 ms</span>
+                <span class="method-start">75053 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addJD</span>
-                <span class="method-start">88160 ms</span>
+                <span class="method-start">78599 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ViewProfileJD</span>
-                <span class="method-start">127724 ms</span>
+                <span class="method-start">114815 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ViewrejectProfile</span>
-                <span class="method-start">139493 ms</span>
+                <span class="method-start">125762 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ViewDuplicateProf</span>
-                <span class="method-start">192462 ms</span>
+                <span class="method-start">173163 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">panelistAdd</span>
-                <span class="method-start">248220 ms</span>
+                <span class="method-start">224170 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addingSlots</span>
-                <span class="method-start">256850 ms</span>
+                <span class="method-start">233634 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchingPanelists</span>
-                <span class="method-start">279077 ms</span>
+                <span class="method-start">252952 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editingPanelists</span>
+                <span class="method-start">258626 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">panelistOverviewDisplay</span>
+                <span class="method-start">263005 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">editingPanelists</span>
-                <span class="method-start">285286 ms</span>
+                <span class="method-name">jobProfilesDisplay</span>
+                <span class="method-start">274957 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">recruitersDisplay</span>
+                <span class="method-start">299453 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">hrRoundDataDisplay</span>
+                <span class="method-start">303869 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

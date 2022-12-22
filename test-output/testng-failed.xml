@@ -5,9 +5,10 @@
     <classes>
       <class name="Test.UsersPageTest2">
         <methods>
+          <include name="jobProfilesDisplay"/>
           <include name="initilization"/>
+          <include name="hrRoundDataDisplay"/>
           <include name="objectInitiate"/>
-          <include name="editingPanelists"/>
         </methods>
       </class> <!-- Test.UsersPageTest2 -->
     </classes>
