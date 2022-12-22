@@ -5,9 +5,11 @@
     <classes>
       <class name="Test.UsersPageTest2">
         <methods>
+          <include name="ViewrejectProfile"/>
           <include name="jobProfilesDisplay"/>
           <include name="initilization"/>
           <include name="hrRoundDataDisplay"/>
+          <include name="recruitersDisplay"/>
           <include name="objectInitiate"/>
         </methods>
       </class> <!-- Test.UsersPageTest2 -->

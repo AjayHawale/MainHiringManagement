@@ -219,21 +219,21 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	public void jobProfilesDisplay() throws InterruptedException {
 	dp.JobProfileData();	
 	dp.SelectJobProfile();
-	dp.SelectCalenderPanelist();
+	dp.SelectCalenderJobProfile1();
 	}
 	
 	@Test(priority=22)
 	public void recruitersDisplay() throws InterruptedException {
 		dp.recruitersData();
 		dp.SelectRecruiters();
-		dp.SelectCalenderPanelist();
+		dp.SelectCalenderRecruiters();
 	}
 	
 	@Test(priority=23)
 	public void hrRoundDataDisplay() throws InterruptedException {
 		dp.HRroundData();
 		dp.SelectJobProfileHR();
-		dp.SelectCalenderPanelist();
+		dp.SelectCalenderHRrounds();
 		
 		
 		

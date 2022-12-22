@@ -187,7 +187,9 @@ public class DashBoardPage {
 		driver.findElement(By.xpath("(//*[@class='ant-select-item-option-content'])[17]")).click();
 	}
 	
-	public void SelectCalenderJobProfile() throws InterruptedException {
+	public void SelectCalenderJobProfile1() throws InterruptedException {
+		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
@@ -212,6 +214,16 @@ public class DashBoardPage {
 	
 		driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[23]")).click();
 	}
+	public void SelectCalenderRecruiters() throws InterruptedException {
+		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
+		Thread.sleep(2000);
+		System.out.println(" Recruiters data is showning");
+		
+	}
 	
 	public void HRroundData() throws InterruptedException {
 		driver.findElement(By.xpath("(//div[@class='ant-tabs-tab'])[3]")).click();
@@ -227,6 +239,17 @@ public class DashBoardPage {
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("(//div[text()='Automation Tester'])[2]")).click();
+	}
+	
+	public void SelectCalenderHRrounds() throws InterruptedException {
+		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
+		Thread.sleep(2000);
+		System.out.println(" HR Round data is showning");
+		
 	}
 	
 	
