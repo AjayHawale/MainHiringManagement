@@ -259,7 +259,6 @@ public class UsersPage {
 				.getText();
 		// ant-notification-topRight']")).getText();
 		System.out.println("// meassage---" + deleteUsersMsg);
-		System.out.println("// meassage--...-" );
 
 	}
 
@@ -299,7 +298,7 @@ public class UsersPage {
 		// random string of length 8 composed of alphabetic characters
 		String userName = RandomStringUtils.randomAlphabetic(9);
 		System.out.println("The UserName is .. " + userName);
-		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Rahul" + userName);
+		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Ajay" + userName);
 	}
 
 	public void AddUsersPhone() {
@@ -319,8 +318,8 @@ public class UsersPage {
 	public void AddingUsersEmail() {
 		Random randomGenerator = new Random();
 		int randomInt = randomGenerator.nextInt(1000);
-		driver.findElement(By.xpath("(//input[@name='email'])[1]")).sendKeys("rahul" + randomInt + "@gmail.com");
-		System.out.println("The emailId of user is .." + "rahul" + randomInt + "@gmail.com");
+		driver.findElement(By.xpath("(//input[@name='email'])[1]")).sendKeys("ajay" + randomInt + "@gmail.com");
+		System.out.println("The emailId of user is .." + "ajayh" + randomInt + "@gmail.com");
 	}
 
 	public void clickOnPlusIcon() throws InterruptedException {
@@ -377,7 +376,17 @@ public class UsersPage {
 
 	public void addingAdminBt() {
 		driver.findElement(By.xpath("//span[text()='Add User']")).click();
+		WebElement errorMsg = driver.findElement(By.xpath("//*[text()='error']"));
+		String text = errorMsg.getText();
+		if (text.equalsIgnoreCase("error")) {
+			AddUserName();
 
+			AddingUsersEmail();
+			AddUsersPhone();
+
+		} else {
+			System.out.println("User get added successfully..");
+		}
 	}
 
 	public void capturingSuccessMessage() {

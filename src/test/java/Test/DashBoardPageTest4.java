@@ -12,7 +12,7 @@ dp.PanelistPage();
 dp.SelectPanelist();
 dp.SelectCalenderPanelist();
 dp.PanelistOverview();
-dp.takeSnapShot(driver);
+
 }
 	
 	

@@ -11,6 +11,7 @@ import java.util.Random;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -263,7 +264,7 @@ public class JobsPage {
 	WebElement TillExperienceField;
 	@FindBy(xpath = "//span[text()='Submit']")
 	WebElement FinalSubmitBtn;
-	@FindBy (xpath="//input[@type='checkbox']")
+	@FindBy(xpath = "//input[@type='checkbox']")
 	WebElement DuplicateCheckBox;
 
 	public JobsPage(WebDriver driver) {
@@ -613,10 +614,10 @@ public class JobsPage {
 	public void Profilereject() throws InterruptedException {
 		Thread.sleep(3000);
 		ViewProfileForJDEyeBtn.click();
-		//Thread.sleep(3000);
+		// Thread.sleep(3000);
 		AnkitProfile.click();
-		//Thread.sleep(3000);
-		//System.out.println("Clicked on the profiele...");
+		// Thread.sleep(3000);
+		// System.out.println("Clicked on the profiele...");
 		ShortlisterComment.sendKeys("You get Rejected ..!!!");
 		Thread.sleep(5000);
 		if (RejectProfileBtn.isDisplayed()) {
@@ -634,10 +635,12 @@ public class JobsPage {
 //		driver.findElement(By.xpath("(//*[@class='ant-btn ant-btn-text'])[1]")).click();
 
 		// ShortlisterComment.sendKeys("You get Rejected ..!!!");
-	//	Thread.sleep(5000);
-		//driver.findElement(By.xpath("//*[text()='Reject']")).click();  //input[@type='checkbox']   //button[@id='rejectCandidate']
-		
+		// Thread.sleep(5000);
+		// driver.findElement(By.xpath("//*[text()='Reject']")).click();
+		// //input[@type='checkbox'] //button[@id='rejectCandidate']
+
 	}
+
 	public void ViewProfileDuplicate() throws InterruptedException {
 		Thread.sleep(3000);
 		ViewProfileForJDEyeBtn.click();
@@ -650,9 +653,81 @@ public class JobsPage {
 		} else {
 			System.out.println("Profile deplicate button issue.");
 		}
-		//button[@class='ant-btn ant-btn-primary']
+		// button[@class='ant-btn ant-btn-primary']
 		driver.findElement(By.xpath("//input[@type='checkbox']")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("(//div[@class='ant-modal-confirm-btns']/button/span)[2]")).click();
 	}
+
+	public void addingJDToJobDescription() throws InterruptedException {
+		
+		driver.findElement(By.id("addJds")).click();
+		driver.findElement(By.xpath("//*[@name='jobTitle']")).sendKeys("Tester");
+
+		{
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
+			wait.until(ExpectedConditions
+					.elementToBeClickable(By.xpath("(//div[@class='ant-select-selection-overflow'])[1]")));
+			driver.findElement(By.xpath("(//div[@class='ant-select-selection-overflow'])[1]")).click();
+			System.out.println(" It is clicking on  location  names....");
+			int size = driver.findElements(By.xpath("//div[@class='ant-select-item-option-content']")).size();
+			System.out.println("The location size is :" + size);
+
+			driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[1]")).click();
+		}
+
+		driver.findElement(By.xpath("//div[@class='m-b-10']")).click();
+		driver.findElement(By.xpath("//div[@class='ql-editor ql-blank']")).sendKeys("Functional Testing");
+		driver.findElement(By.xpath("//button[@id='saveTextEditorJd']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//*[@data-icon='up'])[1]")).click();
+		driver.findElement(By.xpath("(//*[@data-icon='up'])[2]")).click();
+		int a = 2;
+		for (int i = 0; i < a; i++) {
+			driver.findElement(By.xpath("(//*[@data-icon='up'])[3]")).click();
+		}
+		int b = 10;
+		for (int i = 0; i < b; i++) {
+			driver.findElement(By.xpath("(//*[@data-icon='up'])[4]")).click();
+		}
+
+		{
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
+			wait.until(ExpectedConditions
+					.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[3]")));
+
+			driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[3]")).click();
+			driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[11]")).click();
+			driver.findElement(By.xpath("(//input[@class='ant-radio-input'])[1]")).click();
+		}
+		Thread.sleep(2000);
+//		{
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
+//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='ant-select-selection-overflow'])[2]")));
+//		driver.findElement(By.xpath("(//div[@class='ant-form-item-control-input'])[8]/div/div/div/div/div/div/input")).sendKeys("manual t");
+//		}
+		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[5]")).click();
+		WebElement textbox = driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[5]"));
+		textbox.sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("//input[@id='Round1']")).click();
+		Thread.sleep(2000);
+		driver.findElement(
+				By.xpath("(//div[@class='ant-select-item ant-select-item-option ant-select-item-option-active'])[2]"))
+				.click();
+
+		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[9]")).sendKeys("souray");
+		Thread.sleep(4000);
+		WebElement textboxes = driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[9]"));
+		textboxes.sendKeys(Keys.ENTER);
+
+		driver.findElement(By.xpath("//input[@id='Agency1']")).sendKeys("Vector Technologies");
+		Thread.sleep(4000);
+		WebElement textboxes1 = driver.findElement(By.xpath("//input[@id='Agency1']"));
+		textboxes1.sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[12]")).click();
+		driver.findElement(By.xpath("//*[@title='Technical Automotive']")).click();
+		driver.findElement(By.xpath("//button[@id='addJd']")).click();
+
+	}
+
 }

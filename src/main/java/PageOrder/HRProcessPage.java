@@ -68,6 +68,41 @@ public class HRProcessPage {
 	@FindBy(xpath = "(//a[@class='text-sm'])[1]")
 	WebElement viewFeedback;
 	
+	/*ajay*/
+	
+	
+	@FindBy(xpath="//*[@id='root']/section/section/section/aside/div/ul/li[8]")
+	WebElement HRProcessModule;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public HRProcessPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);

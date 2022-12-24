@@ -5,9 +5,15 @@
     <classes>
       <class name="Test.UsersPageTest2">
         <methods>
-          <include name="ViewrejectProfile"/>
+          <include name="panelistAdd"/>
+          <include name="panelistOverviewDisplay"/>
+          <include name="addingSlots"/>
+          <include name="AdAgency"/>
           <include name="jobProfilesDisplay"/>
+          <include name="SearchingJd"/>
+          <include name="ViewProfileJD"/>
           <include name="initilization"/>
+          <include name="addJD"/>
           <include name="hrRoundDataDisplay"/>
           <include name="recruitersDisplay"/>
           <include name="objectInitiate"/>

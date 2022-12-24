@@ -188,12 +188,12 @@ public class DashBoardPage {
 	}
 	
 	public void SelectCalenderJobProfile1() throws InterruptedException {
-		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
-		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//input[@placeholder='Start date'])[2]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//div[text()='16'])[4]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//div[text()='30'])[6]")).click();
+		Thread.sleep(3000);
 		System.out.println(" Job profile data is showning");
 		
 	}
@@ -215,12 +215,13 @@ public class DashBoardPage {
 		driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[23]")).click();
 	}
 	public void SelectCalenderRecruiters() throws InterruptedException {
-		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(7000);
+		driver.findElement(By.xpath("(//input[@placeholder='Start date'])[3]")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("(//div[text()='20'])[6]")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("(//div[text()='30'])[9]")).click();
+		Thread.sleep(4000);
 		System.out.println(" Recruiters data is showning");
 		
 	}
@@ -234,19 +235,19 @@ public class DashBoardPage {
 	
 	public void SelectJobProfileHR() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='ant-tabs-tab-btn'])[4]")));
-		driver.findElement(By.xpath("(//div[@class='ant-tabs-tab-btn'])[4]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='ant-select-selector'])[8]")));
+		driver.findElement(By.xpath("(//div[@class='ant-select-selector'])[8]")).click();
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("(//div[text()='Automation Tester'])[2]")).click();
 	}
 	
 	public void SelectCalenderHRrounds() throws InterruptedException {
-		driver.findElement(By.xpath("//input[@placeholder='Start date']")).click();
+		driver.findElement(By.xpath("(//input[@placeholder='Start date'])[4]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[1]")).click();
+		driver.findElement(By.xpath("(//div[text()='22'])[8]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[@class='ant-picker-body'])[2]/table/tbody/tr[3]/td[7]")).click();
+		driver.findElement(By.xpath("(//div[text()='29'])[12]")).click();
 		Thread.sleep(2000);
 		System.out.println(" HR Round data is showning");
 		
@@ -278,10 +279,39 @@ public class DashBoardPage {
 	}
 	}
 
-	public void takeSnapShot(WebDriver driver2) {
-		// TODO Auto-generated method stub
-		
+	public void getScreenShottwo(String name) {
+		TakesScreenshot ts1 = (TakesScreenshot)driver;
+	    File file1 = ts1.getScreenshotAs(OutputType.FILE);
+				
+	    try {
+	         // FileUtils.copyFile(file1, new File("./Screenshots/Test2_SearchUser.png"));
+	    	 FileUtils.copyFile(file1, new File("./screenshot/"+name+".png"));
+		} catch (IOException e) {
+		e.printStackTrace();
+	}
 	}
 	
+	public void getScreenShotThree(String name) {
+		TakesScreenshot ts1 = (TakesScreenshot)driver;
+	    File file1 = ts1.getScreenshotAs(OutputType.FILE);
+				
+	    try {
+	         // FileUtils.copyFile(file1, new File("./Screenshots/Test2_SearchUser.png"));
+	    	 FileUtils.copyFile(file1, new File("./screenshot/"+name+".png"));
+		} catch (IOException e) {
+		e.printStackTrace();
+	}
+	}
+	public void getScreenShotFour(String name) {
+		TakesScreenshot ts1 = (TakesScreenshot)driver;
+	    File file1 = ts1.getScreenshotAs(OutputType.FILE);
+				
+	    try {
+	         // FileUtils.copyFile(file1, new File("./Screenshots/Test2_SearchUser.png"));
+	    	 FileUtils.copyFile(file1, new File("./screenshot/"+name+".png"));
+		} catch (IOException e) {
+		e.printStackTrace();
+	}
+	}
 
 }
