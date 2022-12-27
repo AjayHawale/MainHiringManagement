@@ -376,17 +376,17 @@ public class UsersPage {
 
 	public void addingAdminBt() {
 		driver.findElement(By.xpath("//span[text()='Add User']")).click();
-		WebElement errorMsg = driver.findElement(By.xpath("//*[text()='error']"));
-		String text = errorMsg.getText();
-		if (text.equalsIgnoreCase("error")) {
-			AddUserName();
-
-			AddingUsersEmail();
-			AddUsersPhone();
-
-		} else {
-			System.out.println("User get added successfully..");
-		}
+//		WebElement errorMsg = driver.findElement(By.xpath("//*[text()='error']"));
+//		String text = errorMsg.getText();
+//		if (text.equalsIgnoreCase("error")) {
+//			AddUserName();
+//
+//			AddingUsersEmail();
+//			AddUsersPhone();
+//
+//		} else {
+//			System.out.println("User get added successfully..");
+//		}
 	}
 
 	public void capturingSuccessMessage() {

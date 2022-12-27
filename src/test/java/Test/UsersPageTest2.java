@@ -58,7 +58,7 @@ public class UsersPageTest2 extends BaseT {
 	@Test(priority = 7)
 	public void DeleteUsers() throws InterruptedException {
 
-		Thread.sleep(5000);
+		//Thread.sleep(1000);
 		up.deleteUsersAj();
 	}
 
@@ -125,7 +125,7 @@ public class UsersPageTest2 extends BaseT {
 	 * 
 	 * }
 	 */
-	
+	@Ignore
 	@Test(priority=13)
 	public void jdadding() throws InterruptedException
 	{
@@ -134,7 +134,7 @@ public class UsersPageTest2 extends BaseT {
 	
 	
 	
-@Ignore
+
 	@Test(priority = 13)
 	public void ViewProfileJD() throws InterruptedException {
 		jp.ViewProfileShort();
@@ -142,7 +142,7 @@ public class UsersPageTest2 extends BaseT {
 	}
 	
 	
-@Ignore
+
 	@Test(priority = 14)
 	public void ViewrejectProfile() throws InterruptedException, AWTException {
 		Thread.sleep(3000);
@@ -166,7 +166,7 @@ public class UsersPageTest2 extends BaseT {
 		jp.Profilereject();
 	}
 
-@Ignore
+
 @Test(priority=15)
 public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	Thread.sleep(3000);
@@ -189,20 +189,20 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	jp.ViewProfileDuplicate();
 }
 	
-@Ignore
+
 	@Test(priority = 16)
 	public void panelistAdd() throws InterruptedException {
 		pp.AddPanelist(BaseT.ReadConfig("PanelistName"), BaseT.ReadConfig("PanelistEmail"),
 				BaseT.ReadConfig("PanelistPhone"));
 		pp.panelistDesignation();
 	}
-@Ignore
+
 	@Test(priority=17)
 	public void addingSlots() throws InterruptedException {
 		pp.addSlotsNewPanelist();
 	}
 	
-@Ignore
+
 	@Test(priority = 18)
 
 	public void searchingPanelists() throws InterruptedException {
@@ -210,7 +210,6 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 
 	}
 	
-@Ignore
 	@Test(priority = 19)
 	public void editingPanelists() throws InterruptedException {
 		pp.EditPanelist(BaseT.ReadConfig("EditPanelistPhone"));
@@ -218,7 +217,6 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 
 	// dashboard page 
 	
-@Ignore
 	@Test(priority=20)	
 	public void panelistOverviewDisplay() throws Exception {
 	dp.PanelistPage();
@@ -228,7 +226,7 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	dp.getScreenShotAS("screenshotOne");
 	}
 
-@Ignore
+
 	@Test(priority=21)
 	public void jobProfilesDisplay() throws InterruptedException {
 	dp.JobProfileData();	
@@ -237,7 +235,7 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	//dp.getScreenShotAS("screenshotTwo");
 	}
 	
-@Ignore
+
 	@Test(priority=22)
 	public void recruitersDisplay() throws InterruptedException {
 		dp.recruitersData();
@@ -246,7 +244,7 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 	//	dp.getScreenShotAS("screenshotThree");
 	}
 	
-@Ignore
+
 	@Test(priority=23)
 	public void hrRoundDataDisplay() throws InterruptedException {
 		dp.HRroundData();

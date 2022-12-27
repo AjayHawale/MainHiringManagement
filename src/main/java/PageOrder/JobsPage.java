@@ -673,33 +673,29 @@ public class JobsPage {
 			int size = driver.findElements(By.xpath("//div[@class='ant-select-item-option-content']")).size();
 			System.out.println("The location size is :" + size);
 
-			driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[1]")).click();
+			driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[12]")).click();
 		}
 
 		driver.findElement(By.xpath("//div[@class='m-b-10']")).click();
 		driver.findElement(By.xpath("//div[@class='ql-editor ql-blank']")).sendKeys("Functional Testing");
 		driver.findElement(By.xpath("//button[@id='saveTextEditorJd']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//*[@data-icon='up'])[1]")).click();
-		driver.findElement(By.xpath("(//*[@data-icon='up'])[2]")).click();
-		int a = 2;
-		for (int i = 0; i < a; i++) {
-			driver.findElement(By.xpath("(//*[@data-icon='up'])[3]")).click();
-		}
-		int b = 10;
-		for (int i = 0; i < b; i++) {
-			driver.findElement(By.xpath("(//*[@data-icon='up'])[4]")).click();
-		}
-
-		{
+		driver.findElement(By.xpath("//input[@name='vacancies']")).sendKeys("5");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@name='min']")).sendKeys("2");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@name='max']")).sendKeys("5");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//input[@name='notice(Days)'])[2]")).sendKeys("15");
+		
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
 			wait.until(ExpectedConditions
-					.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[3]")));
+					.elementToBeClickable(By.xpath("(//input[@class='ant-select-selection-search-input'])[4]")));
 
-			driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[3]")).click();
-			driver.findElement(By.xpath("(//div[@class='ant-select-item-option-content'])[11]")).click();
+			driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[4]")).click();
+			driver.findElement(By.xpath("(//div[text()='High'])[2]")).click();
 			driver.findElement(By.xpath("(//input[@class='ant-radio-input'])[1]")).click();
-		}
+		
 		Thread.sleep(2000);
 //		{
 //			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(9000));
@@ -712,10 +708,10 @@ public class JobsPage {
 		driver.findElement(By.xpath("//input[@id='Round1']")).click();
 		Thread.sleep(2000);
 		driver.findElement(
-				By.xpath("(//div[@class='ant-select-item ant-select-item-option ant-select-item-option-active'])[2]"))
+				By.xpath("(//div[text()='AjayHa'])[1]"))
 				.click();
 
-		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[9]")).sendKeys("souray");
+		driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[10]")).sendKeys("souray");
 		Thread.sleep(4000);
 		WebElement textboxes = driver.findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[9]"));
 		textboxes.sendKeys(Keys.ENTER);
