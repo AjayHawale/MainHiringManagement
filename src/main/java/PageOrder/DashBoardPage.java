@@ -192,7 +192,7 @@ public class DashBoardPage {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("(//div[text()='16'])[4]")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("(//div[text()='30'])[6]")).click();
+		driver.findElement(By.xpath("(//div[text()='24'])[4]")).click();
 		Thread.sleep(3000);
 		System.out.println(" Job profile data is showning");
 		
@@ -220,7 +220,7 @@ public class DashBoardPage {
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("(//div[text()='20'])[6]")).click();
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("(//div[text()='30'])[9]")).click();
+		driver.findElement(By.xpath("(//div[text()='27'])[6]")).click();
 		Thread.sleep(4000);
 		System.out.println(" Recruiters data is showning");
 		
@@ -247,7 +247,7 @@ public class DashBoardPage {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[text()='22'])[8]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//div[text()='29'])[12]")).click();
+		driver.findElement(By.xpath("(//div[text()='28'])[8]")).click();
 		Thread.sleep(2000);
 		System.out.println(" HR Round data is showning");
 		

@@ -121,6 +121,8 @@ public class UsersPage {
 		return driver.findElement(By.xpath("//div[@class='ant-table-content']/..//a[text()='" + agencyName
 				+ "']//following::button[@class='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only deleteIcon']"));
 	}
+	@FindBy(xpath="(//span[@class='anticon anticon-delete'])[1]")
+	WebElement DeleteAgncy;
 
 	@FindBy(xpath = "//span[text()='Yes']")
 	WebElement deletePopupBtn;
@@ -275,7 +277,7 @@ public class UsersPage {
 	}
 
 	public void deleteAgencyAj(String searchagency) {
-		deleteAgencyBtn(searchagency).click();
+		DeleteAgncy(searchagency).click();
 		try {
 			Thread.sleep(2000);
 			deletePopupBtn.click();
@@ -283,6 +285,11 @@ public class UsersPage {
 			e.printStackTrace();
 		}
 
+	}
+
+	private WebElement DeleteAgncy(String searchagency2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public void clickOnUserIcon() throws InterruptedException {

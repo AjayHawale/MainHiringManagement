@@ -5,9 +5,10 @@
     <classes>
       <class name="Test.UsersPageTest2">
         <methods>
-          <include name="jdadding"/>
+          <include name="ViewDuplicateProf"/>
           <include name="initilization"/>
           <include name="objectInitiate"/>
+          <include name="deleteAgency"/>
         </methods>
       </class> <!-- Test.UsersPageTest2 -->
     </classes>
