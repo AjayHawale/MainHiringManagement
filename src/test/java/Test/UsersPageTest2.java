@@ -58,7 +58,7 @@ public class UsersPageTest2 extends BaseT {
 	@Test(priority = 7)
 	public void DeleteUsers() throws InterruptedException {
 
-		//Thread.sleep(1000);
+		// Thread.sleep(1000);
 		up.deleteUsersAj();
 	}
 
@@ -70,7 +70,7 @@ public class UsersPageTest2 extends BaseT {
 //				BaseT.ReadConfig("contactpersonMob"), BaseT.ReadConfig("contactpersonEmailId"));
 
 	}
-	
+
 	@Test(priority = 9)
 	public void SearchAgency() throws InterruptedException {
 
@@ -78,13 +78,14 @@ public class UsersPageTest2 extends BaseT {
 		System.out.println("Agency name: search sucessfully");
 
 	}
-	
+
 	@Test(priority = 10) // , groups = "JobPage"
 	public void deleteAgency() throws InterruptedException {
-
-		up.deleteAgencyAj(AN);
+		//up.deleteAgncyOne();
+		 up.deleteAgencyAj(AN);
 		System.out.println("Agency name deleted sucessfully....");
 	}
+	
 
 	@Test(priority = 11)
 	public void SearchingJd() throws InterruptedException {
@@ -92,7 +93,6 @@ public class UsersPageTest2 extends BaseT {
 		jp.SearchJDAj(JdName);
 
 	}
-
 
 	@Test(priority = 12)
 	public void addJD() throws InterruptedException, AWTException {
@@ -126,22 +126,16 @@ public class UsersPageTest2 extends BaseT {
 	 * }
 	 */
 	@Ignore
-	@Test(priority=13)
-	public void jdadding() throws InterruptedException
-	{
+	@Test(priority = 13)
+	public void jdadding() throws InterruptedException {
 		jp.addingJDToJobDescription();
 	}
-	
-	
-	
 
 	@Test(priority = 13)
 	public void ViewProfileJD() throws InterruptedException {
 		jp.ViewProfileShort();
 		driver.navigate().back();
 	}
-	
-	
 
 	@Test(priority = 14)
 	public void ViewrejectProfile() throws InterruptedException, AWTException {
@@ -166,29 +160,27 @@ public class UsersPageTest2 extends BaseT {
 		jp.Profilereject();
 	}
 
+	@Test(priority = 15)
+	public void ViewDuplicateProf() throws InterruptedException, AWTException {
+		Thread.sleep(3000);
+		jp.clickOnJobIcon();
+		Thread.sleep(3000);
+		jp.addingAutomationTesterProfile();
+		Thread.sleep(3000);
+		jp.AddPersonName();
+		Thread.sleep(3000);
+		jp.AddingPersonEmail();
+		Thread.sleep(3000);
+		jp.AddPersonPhone();
 
-@Test(priority=15)
-public void ViewDuplicateProf() throws InterruptedException, AWTException {
-	Thread.sleep(3000);
-	jp.clickOnJobIcon();
-	Thread.sleep(3000);
-	jp.addingAutomationTesterProfile();
-	Thread.sleep(3000);
-	jp.AddPersonName();
-	Thread.sleep(3000);
-	jp.AddingPersonEmail();
-	Thread.sleep(3000);
-	jp.AddPersonPhone();
-
-	Thread.sleep(3000);
-	jp.AddingPersonalOtherDetails();
-	Thread.sleep(3000);
-	jp.selectPrefferdLocationAddProf();
-	Thread.sleep(3000);
-	jp.uploadFile();
-	jp.ViewProfileDuplicate();
-}
-	
+		Thread.sleep(3000);
+		jp.AddingPersonalOtherDetails();
+		Thread.sleep(3000);
+		jp.selectPrefferdLocationAddProf();
+		Thread.sleep(3000);
+		jp.uploadFile();
+		jp.ViewProfileDuplicate();
+	}
 
 	@Test(priority = 16)
 	public void panelistAdd() throws InterruptedException {
@@ -197,11 +189,10 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 		pp.panelistDesignation();
 	}
 
-	@Test(priority=17)
+	@Test(priority = 17)
 	public void addingSlots() throws InterruptedException {
 		pp.addSlotsNewPanelist();
 	}
-	
 
 	@Test(priority = 18)
 
@@ -209,57 +200,47 @@ public void ViewDuplicateProf() throws InterruptedException, AWTException {
 		pp.SearchPanel(BaseT.ReadConfig("PanelistSearch"));
 
 	}
-	
+
 	@Test(priority = 19)
 	public void editingPanelists() throws InterruptedException {
 		pp.EditPanelist(BaseT.ReadConfig("EditPanelistPhone"));
 	}
 
-	// dashboard page 
-	
-	@Test(priority=20)	
+	// dashboard page
+
+	@Test(priority = 20)
 	public void panelistOverviewDisplay() throws Exception {
-	dp.PanelistPage();
-	dp.SelectPanelist();
-	dp.SelectCalenderPanelist();
-	dp.PanelistOverview();
-	dp.getScreenShotAS("screenshotOne");
+		dp.PanelistPage();
+		dp.SelectPanelist();
+		dp.SelectCalenderPanelist();
+		dp.PanelistOverview();
+		dp.getScreenShotAS("screenshotOne");
 	}
 
-
-	@Test(priority=21)
+	@Test(priority = 21)
 	public void jobProfilesDisplay() throws InterruptedException {
-	dp.JobProfileData();	
-	dp.SelectJobProfile();
-	dp.SelectCalenderJobProfile1();
-	//dp.getScreenShotAS("screenshotTwo");
+		dp.JobProfileData();
+		dp.SelectJobProfile();
+		dp.SelectCalenderJobProfile1();
+		// dp.getScreenShotAS("screenshotTwo");
 	}
-	
 
-	@Test(priority=22)
+	@Test(priority = 22)
 	public void recruitersDisplay() throws InterruptedException {
 		dp.recruitersData();
 		dp.SelectRecruiters();
 		dp.SelectCalenderRecruiters();
-	//	dp.getScreenShotAS("screenshotThree");
+		// dp.getScreenShotAS("screenshotThree");
 	}
-	
 
-	@Test(priority=23)
+	@Test(priority = 23)
 	public void hrRoundDataDisplay() throws InterruptedException {
 		dp.HRroundData();
 		dp.SelectJobProfileHR();
 		dp.SelectCalenderHRrounds();
-		//dp.getScreenShotAS("screenshotFour");
-		
-		
-		
+		// dp.getScreenShotAS("screenshotFour");
+
 	}
-	
-	
-	
-	
-	
 
 	/*
 	 * @AfterMethod public void closeBrowser() { driver.quit(); }

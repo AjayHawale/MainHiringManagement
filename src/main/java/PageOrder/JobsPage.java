@@ -378,6 +378,7 @@ public class JobsPage {
 		SumbitProfBtn.click();
 		Thread.sleep(2000);
 		FinalSubmitBtn.click();
+		Thread.sleep(3000);
 		System.out.println("Add profile gets successfully added.");
 
 	}
@@ -646,6 +647,7 @@ public class JobsPage {
 		ViewProfileForJDEyeBtn.click();
 		// wait(3000);
 		AnkitProfile.click();
+		Thread.sleep(2000);
 		ShortlisterComment.sendKeys("You are dublicate ..!!!");
 		Thread.sleep(5000);
 		if (DuplicateCheckBox.isDisplayed()) {

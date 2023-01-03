@@ -2,72 +2,42 @@
 <testng-results ignored="7" total="31" passed="22" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-02T12:01:58 IST" name="Suite" finished-at="2023-01-02T12:08:19 IST" duration-ms="381130">
+  <suite started-at="2023-01-02T21:11:59 IST" name="Suite" finished-at="2023-01-02T21:17:56 IST" duration-ms="356750">
     <groups>
       <group name="UserPage">
         <method signature="LoginPageTest1.UserPageTest()[pri:4, instance:Test.LoginPageTest1@8f4ea7c]" name="UserPageTest" class="Test.LoginPageTest1"/>
       </group> <!-- UserPage -->
     </groups>
-    <test started-at="2023-01-02T12:01:58 IST" name="Test" finished-at="2023-01-02T12:08:19 IST" duration-ms="381130">
+    <test started-at="2023-01-02T21:11:59 IST" name="Test" finished-at="2023-01-02T21:17:56 IST" duration-ms="356750">
       <class name="Test.UsersPageTest2">
-        <test-method is-config="true" signature="objectInitiate()[pri:0, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:02:13 IST" name="objectInitiate" finished-at="2023-01-02T12:02:13 IST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="objectInitiate()[pri:0, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:12:15 IST" name="objectInitiate" finished-at="2023-01-02T21:12:15 IST" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- objectInitiate -->
-        <test-method signature="AddUserTest1()[pri:6, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:02:13 IST" name="AddUserTest1" depends-on-groups="UserPage" finished-at="2023-01-02T12:02:44 IST" duration-ms="31002" status="PASS">
+        <test-method signature="AddUserTest1()[pri:6, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:12:15 IST" name="AddUserTest1" depends-on-groups="UserPage" finished-at="2023-01-02T21:12:45 IST" duration-ms="29616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddUserTest1 -->
-        <test-method signature="DeleteUsers()[pri:7, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:02:44 IST" name="DeleteUsers" finished-at="2023-01-02T12:02:50 IST" duration-ms="5771" status="PASS">
+        <test-method signature="DeleteUsers()[pri:7, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:12:45 IST" name="DeleteUsers" finished-at="2023-01-02T21:12:51 IST" duration-ms="5644" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DeleteUsers -->
-        <test-method signature="AdAgency()[pri:8, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:02:50 IST" name="AdAgency" finished-at="2023-01-02T12:03:05 IST" duration-ms="14986" status="PASS">
+        <test-method signature="AdAgency()[pri:8, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:12:51 IST" name="AdAgency" finished-at="2023-01-02T21:13:05 IST" duration-ms="14780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AdAgency -->
-        <test-method signature="SearchAgency()[pri:9, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:03:05 IST" name="SearchAgency" finished-at="2023-01-02T12:03:08 IST" duration-ms="2419" status="PASS">
+        <test-method signature="SearchAgency()[pri:9, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:13:05 IST" name="SearchAgency" finished-at="2023-01-02T21:13:08 IST" duration-ms="2650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchAgency -->
-        <test-method signature="deleteAgency()[pri:10, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:03:08 IST" name="deleteAgency" finished-at="2023-01-02T12:03:09 IST" duration-ms="1257" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="deleteAgency()[pri:10, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:13:08 IST" name="deleteAgency" finished-at="2023-01-02T21:13:08 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[element click intercepted: Element <button id="agencyDelete309" type="button" class="ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only deleteIcon">...</button> is not clickable at point (1257, 294). Other element would receive the click: <div class="ant-spin ant-spin-spinning">...</div>
-  (Session info: chrome=108.0.5359.125)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-91HRFE0', ip: '20.0.6.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [16597534237f874312006f5f561325da, clickElement {id=2cdaeb0a-17b5-417c-a178-2d94c2dff8a1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55674}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55674/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (16597534237f874312006f5f561325da)] -> xpath: //div[@class='ant-table-content']/..//a[text()='PrakashWlIQ']//following::button[@class='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only deleteIcon']]
-Session ID: 16597534237f874312006f5f561325da]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.click()" because the return value of "PageOrder.UsersPage.DeleteAgncy(String)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="agencyDelete309" type="button" class="ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only deleteIcon">...</button> is not clickable at point (1257, 294). Other element would receive the click: <div class="ant-spin ant-spin-spinning">...</div>
-  (Session info: chrome=108.0.5359.125)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-91HRFE0', ip: '20.0.6.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [16597534237f874312006f5f561325da, clickElement {id=2cdaeb0a-17b5-417c-a178-2d94c2dff8a1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55674}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55674/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (16597534237f874312006f5f561325da)] -> xpath: //div[@class='ant-table-content']/..//a[text()='PrakashWlIQ']//following::button[@class='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only deleteIcon']]
-Session ID: 16597534237f874312006f5f561325da
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at PageOrder.UsersPage.deleteAgencyAj(UsersPage.java:278)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because the return value of "PageOrder.UsersPage.DeleteAgncy(String)" is null
+at PageOrder.UsersPage.deleteAgencyAj(UsersPage.java:280)
 at Test.UsersPageTest2.deleteAgency(UsersPageTest2.java:85)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -99,49 +69,49 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAgency -->
-        <test-method signature="SearchingJd()[pri:11, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:03:09 IST" name="SearchingJd" finished-at="2023-01-02T12:03:13 IST" duration-ms="4132" status="PASS">
+        <test-method signature="SearchingJd()[pri:11, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:13:08 IST" name="SearchingJd" finished-at="2023-01-02T21:13:12 IST" duration-ms="3852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchingJd -->
-        <test-method signature="addJD()[pri:12, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:03:13 IST" name="addJD" finished-at="2023-01-02T12:03:53 IST" duration-ms="40242" status="PASS">
+        <test-method signature="addJD()[pri:12, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:13:12 IST" name="addJD" finished-at="2023-01-02T21:13:52 IST" duration-ms="40287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addJD -->
-        <test-method signature="ViewProfileJD()[pri:13, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:03:53 IST" name="ViewProfileJD" finished-at="2023-01-02T12:04:07 IST" duration-ms="14008" status="PASS">
+        <test-method signature="ViewProfileJD()[pri:13, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:13:52 IST" name="ViewProfileJD" finished-at="2023-01-02T21:14:05 IST" duration-ms="12920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewProfileJD -->
-        <test-method signature="ViewrejectProfile()[pri:14, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:04:07 IST" name="ViewrejectProfile" finished-at="2023-01-02T12:05:01 IST" duration-ms="53593" status="PASS">
+        <test-method signature="ViewrejectProfile()[pri:14, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:14:05 IST" name="ViewrejectProfile" finished-at="2023-01-02T21:14:59 IST" duration-ms="53944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewrejectProfile -->
-        <test-method signature="ViewDuplicateProf()[pri:15, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:05:01 IST" name="ViewDuplicateProf" finished-at="2023-01-02T12:06:09 IST" duration-ms="67667" status="FAIL">
+        <test-method signature="ViewDuplicateProf()[pri:15, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:14:59 IST" name="ViewDuplicateProf" finished-at="2023-01-02T21:16:04 IST" duration-ms="65356" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@name='shortlisterComment']"}
   (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-91HRFE0', ip: '20.0.6.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'DESKTOP-91HRFE0', ip: '192.168.1.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [16597534237f874312006f5f561325da, findElement {using=xpath, value=//textarea[@name='shortlisterComment']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55674}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55674/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 16597534237f874312006f5f561325da]]>
+Command: [e7fd54643a76e6a1c3e825ede862621f, findElement {using=xpath, value=//textarea[@name='shortlisterComment']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60520}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60520/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e7fd54643a76e6a1c3e825ede862621f]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@name='shortlisterComment']"}
   (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-91HRFE0', ip: '20.0.6.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+System info: host: 'DESKTOP-91HRFE0', ip: '192.168.1.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [16597534237f874312006f5f561325da, findElement {using=xpath, value=//textarea[@name='shortlisterComment']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55674}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55674/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 16597534237f874312006f5f561325da
+Command: [e7fd54643a76e6a1c3e825ede862621f, findElement {using=xpath, value=//textarea[@name='shortlisterComment']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\BRIGOS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60520}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60520/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e7fd54643a76e6a1c3e825ede862621f
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -197,71 +167,71 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewDuplicateProf -->
-        <test-method signature="panelistAdd()[pri:16, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:06:09 IST" name="panelistAdd" finished-at="2023-01-02T12:06:20 IST" duration-ms="11160" status="PASS">
+        <test-method signature="panelistAdd()[pri:16, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:16:04 IST" name="panelistAdd" finished-at="2023-01-02T21:16:16 IST" duration-ms="11637" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- panelistAdd -->
-        <test-method signature="addingSlots()[pri:17, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:06:20 IST" name="addingSlots" finished-at="2023-01-02T12:06:56 IST" duration-ms="36087" status="PASS">
+        <test-method signature="addingSlots()[pri:17, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:16:16 IST" name="addingSlots" finished-at="2023-01-02T21:16:39 IST" duration-ms="22499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addingSlots -->
-        <test-method signature="searchingPanelists()[pri:18, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:06:56 IST" name="searchingPanelists" finished-at="2023-01-02T12:07:02 IST" duration-ms="6222" status="PASS">
+        <test-method signature="searchingPanelists()[pri:18, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:16:39 IST" name="searchingPanelists" finished-at="2023-01-02T21:16:45 IST" duration-ms="6051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchingPanelists -->
-        <test-method signature="editingPanelists()[pri:19, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:07:02 IST" name="editingPanelists" finished-at="2023-01-02T12:07:07 IST" duration-ms="4856" status="PASS">
+        <test-method signature="editingPanelists()[pri:19, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:16:45 IST" name="editingPanelists" finished-at="2023-01-02T21:16:50 IST" duration-ms="4907" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editingPanelists -->
-        <test-method signature="panelistOverviewDisplay()[pri:20, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:07:07 IST" name="panelistOverviewDisplay" finished-at="2023-01-02T12:07:26 IST" duration-ms="18776" status="PASS">
+        <test-method signature="panelistOverviewDisplay()[pri:20, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:16:50 IST" name="panelistOverviewDisplay" finished-at="2023-01-02T21:17:03 IST" duration-ms="13816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- panelistOverviewDisplay -->
-        <test-method signature="jobProfilesDisplay()[pri:21, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:07:26 IST" name="jobProfilesDisplay" finished-at="2023-01-02T12:07:41 IST" duration-ms="15164" status="PASS">
+        <test-method signature="jobProfilesDisplay()[pri:21, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:17:03 IST" name="jobProfilesDisplay" finished-at="2023-01-02T21:17:18 IST" duration-ms="14902" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jobProfilesDisplay -->
-        <test-method signature="recruitersDisplay()[pri:22, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:07:41 IST" name="recruitersDisplay" finished-at="2023-01-02T12:08:06 IST" duration-ms="25172" status="PASS">
+        <test-method signature="recruitersDisplay()[pri:22, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:17:18 IST" name="recruitersDisplay" finished-at="2023-01-02T21:17:44 IST" duration-ms="25475" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recruitersDisplay -->
-        <test-method signature="hrRoundDataDisplay()[pri:23, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T12:08:06 IST" name="hrRoundDataDisplay" finished-at="2023-01-02T12:08:19 IST" duration-ms="12562" status="PASS">
+        <test-method signature="hrRoundDataDisplay()[pri:23, instance:Test.UsersPageTest2@36902638]" started-at="2023-01-02T21:17:44 IST" name="hrRoundDataDisplay" finished-at="2023-01-02T21:17:56 IST" duration-ms="12227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hrRoundDataDisplay -->
       </class> <!-- Test.UsersPageTest2 -->
       <class name="Test.JobsPageTest">
-        <test-method is-config="true" signature="initilization()[pri:0, instance:Test.JobsPageTest@5158b42f]" started-at="2023-01-02T12:01:43 IST" name="initilization" finished-at="2023-01-02T12:01:58 IST" duration-ms="15017" status="PASS">
+        <test-method is-config="true" signature="initilization()[pri:0, instance:Test.JobsPageTest@5158b42f]" started-at="2023-01-02T21:11:54 IST" name="initilization" finished-at="2023-01-02T21:11:59 IST" duration-ms="5378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilization -->
       </class> <!-- Test.JobsPageTest -->
       <class name="Test.LoginPageTest1">
-        <test-method is-config="true" signature="objectInitiate()[pri:0, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:01:58 IST" name="objectInitiate" finished-at="2023-01-02T12:01:58 IST" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="objectInitiate()[pri:0, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:11:59 IST" name="objectInitiate" finished-at="2023-01-02T21:12:00 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- objectInitiate -->
-        <test-method signature="LoginPageLogo()[pri:0, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:01:58 IST" name="LoginPageLogo" finished-at="2023-01-02T12:02:00 IST" duration-ms="2184" status="PASS">
+        <test-method signature="LoginPageLogo()[pri:0, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:12:00 IST" name="LoginPageLogo" finished-at="2023-01-02T21:12:02 IST" duration-ms="2294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginPageLogo -->
-        <test-method signature="forgetPasswordLink()[pri:1, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:02:00 IST" name="forgetPasswordLink" finished-at="2023-01-02T12:02:01 IST" depends-on-methods="Test.LoginPageTest1.LoginPageLogo" duration-ms="665" status="PASS">
+        <test-method signature="forgetPasswordLink()[pri:1, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:12:02 IST" name="forgetPasswordLink" finished-at="2023-01-02T21:12:02 IST" depends-on-methods="Test.LoginPageTest1.LoginPageLogo" duration-ms="582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgetPasswordLink -->
-        <test-method signature="LoginButtonDisplay()[pri:2, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:02:01 IST" name="LoginButtonDisplay" finished-at="2023-01-02T12:02:01 IST" depends-on-methods="Test.LoginPageTest1.forgetPasswordLink" duration-ms="579" status="PASS">
+        <test-method signature="LoginButtonDisplay()[pri:2, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:12:02 IST" name="LoginButtonDisplay" finished-at="2023-01-02T21:12:03 IST" depends-on-methods="Test.LoginPageTest1.forgetPasswordLink" duration-ms="556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginButtonDisplay -->
-        <test-method signature="HiringTitleTest()[pri:3, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:02:01 IST" name="HiringTitleTest" finished-at="2023-01-02T12:02:01 IST" depends-on-methods="Test.LoginPageTest1.LoginButtonDisplay" duration-ms="11" status="PASS">
+        <test-method signature="HiringTitleTest()[pri:3, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:12:03 IST" name="HiringTitleTest" finished-at="2023-01-02T21:12:03 IST" depends-on-methods="Test.LoginPageTest1.LoginButtonDisplay" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HiringTitleTest -->
-        <test-method signature="UserPageTest()[pri:4, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:02:01 IST" name="UserPageTest" finished-at="2023-01-02T12:02:12 IST" depends-on-methods="Test.LoginPageTest1.HiringTitleTest" duration-ms="10798" status="PASS">
+        <test-method signature="UserPageTest()[pri:4, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:12:03 IST" name="UserPageTest" finished-at="2023-01-02T21:12:14 IST" depends-on-methods="Test.LoginPageTest1.HiringTitleTest" duration-ms="10700" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserPageTest -->
-        <test-method signature="LogoTest()[pri:5, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T12:02:12 IST" name="LogoTest" finished-at="2023-01-02T12:02:13 IST" duration-ms="1160" status="PASS">
+        <test-method signature="LogoTest()[pri:5, instance:Test.LoginPageTest1@8f4ea7c]" started-at="2023-01-02T21:12:14 IST" name="LogoTest" finished-at="2023-01-02T21:12:15 IST" duration-ms="1485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoTest -->

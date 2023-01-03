@@ -276,7 +276,8 @@ public class UsersPage {
 		// System.out.println("Agency search is ..." + Vector);
 	}
 
-	public void deleteAgencyAj(String searchagency) {
+	public void deleteAgencyAj(String searchagency) throws InterruptedException {
+		Thread.sleep(2000);
 		DeleteAgncy(searchagency).click();
 		try {
 			Thread.sleep(2000);
@@ -286,6 +287,22 @@ public class UsersPage {
 		}
 
 	}
+	
+	public void deleteAgncyOne() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7000));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='anticon anticon-delete'])[1]")));
+		driver.findElement(By.xpath("(//span[@class='anticon anticon-delete'])[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()='Yes']")).click();
+		System.out.println("Agency is deleted");
+	}
+	
+	
+	
+	
+	
+	
+	
 
 	private WebElement DeleteAgncy(String searchagency2) {
 		// TODO Auto-generated method stub
@@ -294,7 +311,7 @@ public class UsersPage {
 
 	public void clickOnUserIcon() throws InterruptedException {
 
-		Thread.sleep(30);
+		Thread.sleep(300);
 
 		driver.findElement(By.xpath("//*[@id=\"root\"]/section/section/section/aside/div/ul/li[4]")).click();
 		System.out.println("The clicked on Users Page....");
