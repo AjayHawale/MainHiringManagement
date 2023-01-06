@@ -1,37 +1,40 @@
-pipeline
-{
+pipeline {
     agent any
 
-    stages
-    {
-        stage('Build')
+    stages {
+        stage('Build') 
         {
-            steps
+            steps 
             {
-                echo ' Build Test '
+                echo 'Building the project'
+bat "mvn clean"
             }
         }
- stage('Test')
+         stage('Test') 
         {
-            steps
+            steps 
             {
-                echo 'Test Portal'
+                echo 'Testing the project'
+bat "mvn test"
             }
         }
- stage('Deploy')
+         stage('compile') 
         {
-            steps
+            steps 
             {
-                echo 'Deploy Portal'
+                echo 'compiling the project'
+bat "mvn compile"
+            }
+        }
+       
+   stage('Deploy') 
+        {
+            steps 
+            {
+                echo 'Deploying the project'
+
             }
         }
     }
-    post 
-{
-failure 
-{
-emailext body: 'Summary Report', subject: 'Jenkins Run', to: 'ajay.digambar@brigosha.com'
-}
 
-}
 }
