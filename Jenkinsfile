@@ -6,35 +6,28 @@ pipeline {
         {
             steps 
             {
-                echo 'Building the project'
-bat "mvn clean"
+                echo 'Hello World'
             }
         }
          stage('Test') 
         {
             steps 
             {
-                echo 'Testing the project'
-bat "mvn test"
+                echo 'Hello World'
             }
         }
-         stage('compile') 
+         stage('Deploy') 
         {
             steps 
             {
-                echo 'compiling the project'
-bat "mvn compile"
+                echo 'Hello World'
             }
         }
-       
-   stage('Deploy') 
-        {
-            steps 
-            {
-                echo 'Deploying the project'
-
-            }
-        }
+         
     }
-
+post{
+always{
+emailext body: 'Summary of all stages ', subject: 'Jenkins Pipeline Report', to: 'ajay.digambar@brigosha.com'
+}
+}
 }
